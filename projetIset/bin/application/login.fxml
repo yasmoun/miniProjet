@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <center>
+      <AnchorPane prefHeight="400.0" prefWidth="445.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="cin" layoutX="67.0" layoutY="223.0" prefHeight="25.0" prefWidth="244.0" promptText="numéro carte d'identité" />
+            <PasswordField fx:id="password" layoutX="67.0" layoutY="268.0" prefHeight="25.0" prefWidth="244.0" promptText="mot de passe" />
+            <Label layoutX="-248.0" layoutY="14.0" text="Institut Supérieur des études technologiques de Nabeul" textFill="#0d05ff">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="91.0" fitWidth="98.0" layoutX="118.0" layoutY="121.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/OIP__2_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="27.0" layoutX="32.0" layoutY="225.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/R__3_-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="22.0" fitWidth="35.0" layoutX="28.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/kisspng-password-computer-icons-security-safety-icon-5b35b7bccd7000.4204945415302471008415-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="loginMessageLabel" layoutX="63.0" layoutY="300.0" textFill="#e81111" />
+            <Button fx:id="loginBtn" layoutX="110.0" layoutY="325.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="40.0" prefWidth="140.0" style="-fx-background-color: gray;" text="Se connecter" textFill="#070243">
+               <font>
+                  <Font size="19.0" />
+               </font>
+            </Button>
+            <Line endX="-100.0" endY="304.0" layoutX="111.0" layoutY="82.0" startX="-100.0" />
+            <Label layoutX="53.0" layoutY="378.0" text="Vous n'avez pas de compte!" />
+            <Label fx:id="creer" layoutX="209.0" layoutY="378.0" onMouseClicked="#redirectToRegisterPage" text="Créez-en un !" textFill="#0da8ab" underline="true" />
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="348.0" prefWidth="269.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="400.0" fitWidth="269.0" layoutX="5.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Downloads/R.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>

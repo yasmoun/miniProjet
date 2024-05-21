@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="437.0" prefWidth="746.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CalendrierController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <Pane prefHeight="400.0" prefWidth="112.0" style="-fx-background-color: black;">
+               <children>
+                  <ImageView fitHeight="84.0" fitWidth="96.0" layoutX="8.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../Downloads/OIP%20(1).jpg" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="88.0" prefHeight="17.0" prefWidth="90.0" text="ISETN" textFill="#cd8b07">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="calendrier" layoutX="9.0" layoutY="183.0" prefHeight="27.0" prefWidth="96.0" text="Calendrier" textFill="#5827e1" underline="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="113.0" prefHeight="45.0" prefWidth="631.0" style="-fx-background-color: black;">
+               <children>
+                  <Label fx:id="nometprenom" layoutX="522.0" layoutY="11.0" prefHeight="17.0" prefWidth="3.0" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="cin" layoutX="14.0" layoutY="14.0" />
+               </children>
+            </Pane>
+            <Line endX="631.0" layoutX="113.0" layoutY="45.0" startX="0.0" stroke="#ffb508" strokeWidth="3.0" />
+            <Line endX="392.0" layoutX="113.0" layoutY="92.0" startX="0.0" stroke="#ffb508" strokeWidth="3.0" />
+            <Pane layoutX="113.0" layoutY="47.0" prefHeight="45.0" prefWidth="631.0" style="-fx-background-color: white;">
+               <children>
+                  <SplitMenuButton fx:id="mois" layoutX="309.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="Février">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Janvier" />
+                        <MenuItem mnemonicParsing="false" text="Mars" />
+                     </items>
+                  </SplitMenuButton>
+                  <Button fx:id="addBtn" layoutX="14.0" layoutY="10.0" mnemonicParsing="false" text="+ Nouvelle activité" />
+                  <SplitMenuButton fx:id="annee" layoutX="395.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="84.0" text="2024">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="2023" />
+                        <MenuItem mnemonicParsing="false" text="2025" />
+                     </items>
+                  </SplitMenuButton>
+               </children>
+            </Pane>
+            <Pane layoutX="113.0" layoutY="92.0" prefHeight="309.0" prefWidth="228.0" style="-fx-background-color: white;">
+               <children>
+			<GridPane fx:id="calendrierJ" layoutX="19.0" layoutY="47.0" prefHeight="197.0" prefWidth="218.0" style="-fx-background-color: white;">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="37.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  <children>
+		
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="2" GridPane.columnIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="3" GridPane.columnIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="4" GridPane.columnIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="5" GridPane.columnIndex="4" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="6" GridPane.columnIndex="5" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="7" GridPane.columnIndex="6" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="8" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="9" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="10" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="11" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="12" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="13" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="14" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="15" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="16" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="17" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="18" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="19" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="20" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="21" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="22" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="23" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="24" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="25" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="26" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="27" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="28" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="29" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="30" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="40.0" text="31" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Label layoutX="14.0" layoutY="36.0" text="Lun" textFill="#1ab1bc" />
+                  <Label layoutX="41.0" layoutY="36.0" text="Mar" textFill="#1ab1bc" />
+                  <Label layoutX="198.0" layoutY="36.0" text="Dim" textFill="#1ab1bc" />
+                  <Label layoutX="167.0" layoutY="36.0" text="Sam" textFill="#1ab1bc" />
+                  <Label layoutX="138.0" layoutY="36.0" text="Ven" textFill="#1ab1bc" />
+                  <Label layoutX="107.0" layoutY="35.0" text="Jeu" textFill="#1ab1bc" />
+                  <Label layoutX="73.0" layoutY="36.0" text="Mer" textFill="#1ab1bc" />
+               </children>
+            </Pane>
+            <Pane layoutX="340.0" layoutY="92.0" prefHeight="309.0" prefWidth="354.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane layoutX="3.0" prefHeight="27.0" prefWidth="402.0" style="-fx-background-color: #1ab1bc;">
+                     <children>
+                        <Label layoutX="5.0" prefHeight="27.0" prefWidth="67.0" text="Activités">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="date" layoutX="169.0" layoutY="5.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutX="5.0" layoutY="27.0" prefHeight="271.0" prefWidth="3.0" style="-fx-background-color: #94e199;" />
+                  <TableView fx:id="activites" layoutX="3.0" layoutY="27.0" prefHeight="283.0" prefWidth="402.0">
+                     <columns>
+                        <TableColumn fx:id="typeCol" prefWidth="65.0" text="Type" />
+                        <TableColumn fx:id="nomCol" prefWidth="79.0" text="Nom" />
+                        <TableColumn fx:id="dateCol" prefWidth="73.0" text="Date" />
+                        <TableColumn fx:id="hdCol" prefWidth="52.0" text="H.D" />
+                        <TableColumn fx:id="hfCol" prefWidth="57.0" text="H.F" />
+                        <TableColumn fx:id="mjCol" prefWidth="75.0" text="M.J par" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Button fx:id="supprimerBtn" layoutX="524.0" layoutY="404.0" mnemonicParsing="false" onAction="#Supprimer" prefHeight="25.0" prefWidth="96.0" style="-fx-background-color: #bfe4e2;" text="Supprimer" />
+      <Label fx:id="deconnecter" layoutX="13.0" layoutY="407.0" onMouseClicked="#handleDeconnecterClick" prefHeight="17.0" prefWidth="184.0" text="&lt;&lt; Se déconnecter" textFill="#f80606" underline="true">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
